@@ -1,4 +1,4 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{report}
 \usepackage{vntex}
 %\usepackage[english,vietnam]{babel}
 %\usepackage[utf8]{inputenc}
@@ -83,7 +83,6 @@
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
-
 \lstset{frame=tb,
 	language=Matlab,
 	aboveskip=3mm,
@@ -105,7 +104,8 @@
 	firstnumber=1,
 	numberfirstline=true
 }
-
+\renewcommand{\chaptername}{Chương}
+\renewcommand\bibname{Tài liệu tham khảo}
 \begin{document}
 
 \begin{titlepage}
@@ -155,12 +155,41 @@ KHOA KHOA HỌC - KỸ THUẬT MÁY TÍNH
 \end{table}
 
 \begin{center}
-{\footnotesize TP. HỒ CHÍ MINH, THÁNG 4/2017}
+{\footnotesize TP.HỒ CHÍ MINH, THÁNG 4/2017}
 \end{center}
 \end{titlepage}
 
 
 \thispagestyle{empty}
+
+\newpage
+\begin{center}
+	LỜI CAM ĐOAN
+\end{center}
+
+Luận văn của chúng tôi có tham khảo các tài liệu, bài báo, trang web được trình bày ở
+mục tài liệu tham khảo và ở mỗi tham khảo chúng tôi đều trích dẫn nguồn gốc. Chúng tôi
+xin cam đoan rằng ngoài các trích dẫn từ các tham khảo trên toàn bộ nội dung trong báo cáo
+là do chúng tôi tự soạn thảo từ kết quả thực hiện của riêng chúng tôi, không sao chép từ
+bất kì tài liệu nào khác.\\
+
+Chúng tôi sẽ hoàn toàn chịu xử lí theo quy định nếu có bất cứ sai phạm nào so với lời
+cam kết.
+
+\newpage 
+\begin{center}
+	LỜI CẢM ƠN
+\end{center}
+
+\newpage
+\begin{center}
+	TÓM TẮT LUẬN VĂN
+\end{center} 
+
+\newpage
+\begin{center}
+	BỐ CỤC LUẬN VĂN
+\end{center} 
 
 \newpage
 \tableofcontents
@@ -170,9 +199,37 @@ KHOA KHOA HỌC - KỸ THUẬT MÁY TÍNH
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{GIỚI THIỆU}
+\section{Lý do chọn đề tài}
+\section{Tính thực tiễn}
+\section{Mục tiêu của luận văn}
+\section{Qui trình thực hiện luận văn}
 
+\chapter{KIẾN THỨC NỀN TẢNG}
+\section{Kiến thức xử lý ảnh}
+\subsection{Bài toán phát hiện đối tượng}
+\subsection{Phương pháp thị giác máy tính truyền thống}
+\subsection{Phương pháp học sâu}
+\section{Điện toán cạnh mạng}
 
-	
+\chapter{CÁC CÔNG TRÌNH LIÊN QUAN }
+\section{Single Shot MultiBox Detector}
+\section{Feature Fusion Single Shot MultiBox Detector}
+\section{Single Shot Scale-invariant Face Detector }
+
+\chapter{NỘI DUNG THỰC HIỆN}
+\section{Mục tiêu} thử nghiệm các mô hình và giải pháp cải tiến, sau đó triển khai lên computing box
+\section{Thử nghiệm các mô hình}
+\subsection{Chuẩn bị dữ liệu}
+\subsection{Một số tham số cần lưu ý}
+\subsection{Đánh giá mô hình}
+\subsection{Tối ưu hàm mất mát}
+
+\section{Triển khai mô hình lên board Jetson}
+
+\chapter{KẾT LUẬN, ĐÁNH GIÁ, HƯỚNG PHÁT TRIỂN}
+
+\chapter*{PHỤ LỤC}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{thebibliography}{80}
 
