@@ -25,6 +25,7 @@
 \usepackage{epsfig}
 \usepackage{tikz}
 \usepackage{listings}
+
 \usetikzlibrary{arrows,snakes,backgrounds}
 \usepackage{hyperref}
 \hypersetup{urlcolor=blue,linkcolor=black,citecolor=black,colorlinks=true} 
@@ -104,13 +105,17 @@
 	firstnumber=1,
 	numberfirstline=true
 }
+
 \renewcommand{\chaptername}{Chương}
 \renewcommand\bibname{Tài liệu tham khảo}
+\usepackage[toc,page]{appendix}
+\usepackage{indentfirst}
+
 \begin{document}
 
 \begin{titlepage}
 \begin{center}
-ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH \\
+ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ  \\
 TRƯỜNG ĐẠI HỌC BÁCH KHOA \\
 KHOA KHOA HỌC - KỸ THUẬT MÁY TÍNH 
 \end{center}
@@ -123,19 +128,18 @@ KHOA KHOA HỌC - KỸ THUẬT MÁY TÍNH
 \end{center}
 \end{figure}
 
-\vspace{1cm}
-
-
 \begin{center}
 \begin{tabular}{c}
-	\multicolumn{1}{l}{\textbf{{\Large MÔ HÌNH HOÁ TOÁN HỌC}}}\\
+	\multicolumn{1}{c}{\textbf{{\Huge LUẬN VĂN TỐT NGHIỆP}}}\\
 	~~\\
+	\\
+	\\
 	\hline
 	\\
-	\multicolumn{1}{l}{\textbf{{\Large Xử lý tối ưu bài toán}}}\\
+	\multicolumn{1}{l}{\textbf{{\huge Nghiên cứu giải thuật xử lý ảnh}}}\\
 	\\
 	
-	\textbf{{\Huge Hospitals \& Residents trên Matlab}}\\
+	\textbf{{\huge \& Giải pháp Egde Computing tổng thể}}\\
 	\\
 	\hline
 \end{tabular}
@@ -144,13 +148,14 @@ KHOA KHOA HỌC - KỸ THUẬT MÁY TÍNH
 \vspace{3cm}
 
 \begin{table}[h]
-\begin{tabular}{rrl}
-\hspace{5 cm} & GVHD: &Lê Hồng Trang\\
-& SV: & Chìu Tuấn Bình - 1510221\\
-& & Mai Đức Tú - 1513924 \\
-& & Phồng Quang Tuấn - 1513865\\
-& & Lê Duy Hiển - 1511057 \\
-& & Nguyễn Đỗ Đức Anh - 1510062\\
+\begin{tabular}{rrll}
+\hspace{5 cm} & GVHD: &TS. LÊ THÀNH SÁCH&\\
+& & PGS.TS THOẠI NAM\\
+& & \\	
+& SV: & Trần Minh Thông & 1413843\\
+& & Hồ Bảo Quốc & 1413171 \\
+& & Dương Viết Trung & 1414272\\
+
 \end{tabular}
 \end{table}
 
@@ -164,7 +169,7 @@ KHOA KHOA HỌC - KỸ THUẬT MÁY TÍNH
 
 \newpage
 \begin{center}
-	LỜI CAM ĐOAN
+	\textbf{LỜI CAM ĐOAN}
 \end{center}
 
 Luận văn của chúng tôi có tham khảo các tài liệu, bài báo, trang web được trình bày ở
@@ -178,18 +183,100 @@ cam kết.
 
 \newpage 
 \begin{center}
-	LỜI CẢM ƠN
+	\textbf{LỜI CẢM ƠN}
 \end{center}
 
-\newpage
-\begin{center}
-	TÓM TẮT LUẬN VĂN
-\end{center} 
+Đầu tiên, nhóm xin gửi lời cảm ơn chân thành đến thầy hướng dẫn TS. Lê Thành Sách
+đã luôn trao đổi, góp ý và hướng dẫn chúng tôi trong suốt thời gian qua. Thầy không những
+chia sẻ những kiến thức liên quan đến nội dung đề tài mà còn giúp đỡ, định hướng các công 
+việc cần thiết và đốc thúc chúng tôi hoàn tất luận văn tốt nghiệp của mình.\\
+
+Xin cảm ơn chân thành PGS.TS Thoại Nam, người đã định hướng đề tài và tin tưởng giao đề 
+tài rất hay và thiết thực này cho nhóm. Thầy cũng là người cung cấp thiết bị cũng như 
+những sự hỗ trợ cần thiết khác cho nhóm, giúp nhóm có cơ sở để hoàn thành bài tốt nghiệp
+ của mình. \\
+
+Xin gửi lời cảm ơn hai anh khóa trên là Minh và Thành  đã chỉ dẫn và hỗ trợ các kiến thức
+cùng công cụ nền tảng cần thiết để hiện thực và thử nghiệm chương trình.\\
+
+Xin chân thành cảm ơn đến các thầy cô trường Đại học Bách Khoa thành phố Hồ Chí
+Minh và đặc biệt là khoa Khoa học và Kĩ thuật Máy tính đã giảng dạy những kiến thức bổ
+ích cho chúng tôi trong suốt thời gian học tại trường.\\
+
+Cuối cùng, chúng tôi gởi lời cảm ơn tới các bạn, người thân đã tham gia giúp đỡ nhóm tạo
+nên bộ dữ liệu huấn luyện cho chương trình.\\
+
 
 \newpage
 \begin{center}
-	BỐ CỤC LUẬN VĂN
+	\textbf{TÓM TẮT LUẬN VĂN}
 \end{center} 
+
+Trong vài năm trở lại đây, chứng kiến sự bùng nổ của mạng nơ-ron nhân tạo hay phương pháp 
+học sâu đã đạt được những thành tựu vượt bậc, đặc biệt trong ngành thị giác máy tính. Các 
+ứng dụng của thị giác máy tính len lỏi trong mọi lĩnh vực đời sống của xã hội, nổi bật là 
+các ứng dụng tìm kiếm nội dung ảnh, bản đồ, các ứng dụng trong y học, xe tự lái, .. Các ứng
+ dụng này đều được xây dựng trên cái bài toán nhỏ hơn như phân loại ảnh (classification), 
+ định vị (localization) và phát hiện đối tượng (detection), phân mảnh đối tượng 
+ (segmentation).  Trong phạm vi luận văn này, nhóm ưu tiên tìm hiểu bài toán phát hiện
+đối tượng, là sự kết hợp giữa hai bài toán định vị đối tượng và phân loại ảnh, sử dụng
+phương pháp học sâu.  Cuộc thi nổi tiếng nhất cho bài toán nhận dạng đối tượng là ILSVRC, 
+có rất nhiều mô hình dẫn đầu xuất phát từ cuộc thi này. Đặc biệt là mô hình SSD, giành 
+chiến thắng cuộc thi ILSVRC \\
+
+Mạng nơ-ron sâu thực chất không phải là một khái niệm mới, mà nó xuất hiện từ những
+năm 19xx. Lý do khiến chúng mãi bây giờ mới nổi lên, chính là vì sự lớn nhanh của sức
+mạnh phần cứng máy tính cùng trong thời đại bùng nổ về dữ liệu. Các mạng nơ-ron sâu 
+đòi hỏi khả năng tính toán vô cùng lớn của phần cứng để tính toán hàng gigabyte,
+terabyte dữ liệu. Phần cứng máy tính hiện nay không chỉ có đột phá về sức mạnh tính 
+toán mà còn về kích thước của chúng. Hiện nay đã có những máy tính có sức mạnh trung
+bình có kích thước chỉ bằng một thẻ bài tây, chính ưu điểm này mở đường cho một xu
+hướng mới, tính toán ở cạnh mạng - edge computing, thiết bị tính toán được cài đặt
+ngay trên thiết bị quan trắc dữ liệu giúp tối ưu đường truyền, giảm tải cho server,
+ận dụng khả năng tính toán. Tuy nhiên, vẫn còn đó những cơ hội cũng như thách thức
+đang chờ được giải quyết. Trong phạm vi luận văn, nhóm đã triển khai giải thuật 
+phát hiện đối tượng lên thiết bị IoT của Nvidia là Jetson Tx2. 
+
+\newpage
+\begin{center}
+	\textbf{BỐ CỤC LUẬN VĂN}
+\end{center} 
+
+Luận văn gồm 3 phần chính, phần mở đầu, phần hiện thực và kết luận \\
+
+Phần mở đầu được nêu trong CHƯƠNG 1: GIỚI THIỆU, nhằm cung cấp cái nhìn tổng quan về đề tài,
+ mục tiêu của nhóm cũng như quá trình nghiên cứu, thực hiện luận văn của nhóm.\\
+
+Phần hiện thực gồm 4 chương\\
+\begin{itemize}
+	\item CHƯƠNG 2: KIẾN THỨC NỀN TẢNG. Trình bày kiến thức cơ sở của bài toán phát hiện
+	 đối tượng, ưu điểm của hướng tiếp cận sử dụng mạng nơ-ron tích chập. Một số bài 
+	 toán và mô hình liên quan trực tiếp tới bài toán phát hiện đối tượng. Trình bày 
+	 những kiến thức cơ bản về tính toán cạnh mạng, các thông số cần biết của thiết bị
+	  và nêu lên những cơ hội cũng như khó khăn còn tồn tại của tính toán mạng. 
+	\item CHƯƠNG 3: CÁC CÔNG TRÌNH LIÊN QUAN. Trình bày một số một hình liên quan 
+	trực tiếp và được sử dụng trong luận văn, chủ yếu là mô hình ssd và các biến thể 
+	của nó.
+
+	\item CHƯƠNG 4: NỘI DUNG THỰC HIỆN
+\end{itemize}
+
+Phần kết luận là chương cuối cùng, CHƯƠNG 5: KẾT LUẬN, ĐÁNH GIÁ, HƯỚNG PHÁT TRIỂN. Tại đây, nhóm xin đưa
+ra một số nhận xét về công trình nghiên cứu của mình, cũng như những đóng góp mà luận
+văn đem lại. Bên cạnh đó, nhóm nhìn nhận lại những sai sót và đưa ra những hướng giải
+quyết, phát triển trong tương lai.\\
+
+Ngoài 3 phần chính vừa nêu trên, luận văn còn bao gồm N phụ lục bổ sung thêm các
+thông tin cần thiết nhằm hỗ trợ các nhóm phát triển sau. Cụ thể:
+\begin{itemize}
+	\item PHỤ LỤC 1:
+\end{itemize}
+
+\newpage %danh muc bang
+\listoftables
+\newpage
+\listoffigures
+
 
 \newpage
 \tableofcontents
@@ -199,11 +286,45 @@ cam kết.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{GIỚI THIỆU}
+\chapter{GIỚI THIỆU} 
+Trong phần thứ nhất của luận văn, nhóm sẽ 
+trình bày nguyên nhân nhóm chọn đề tài cũng như mục tiêu mà nhóm mong muốn đạt được 
+khi thực hiện đề tài.
+
 \section{Lý do chọn đề tài}
+
+	Trong những năm gần đây, những nghiên cứu về deep learning đang thu được
+những kết quả ấn tượng, đặc biệt trong lĩnh vực thị giác máy tính, các mô 
+hình deep learning thu được kết quả có độ chính xác cao hơn và có nhiều ưu 
+điểm vượt trội so với các
+phương pháp thị giác máy tính truyền thống. Chúng đã đưa các công nghệ tương lai
+ như xe tự lái, hệ thống giám sát theo dõi qua video, nhận diện khuôn mặt, .. đến 
+ gần với hiện thực hơn, hiệu quả hơn và thậm chí một số công nghệ đã được áp dụng 
+ thành công trong một số điều kiện nhất định. Sự thành công đã được kiểm chứng và 
+ tiềm năng to lớn của deep learning, nhóm mong muốn có thể áp dụng những giải thuật, 
+ những mô hình hiện có và tìm cách cải tiến nó để giải quyết những vấn đề thực tế ở Việt Nam hiện nay. \\
+ 
+ Cuối năm 2017, phóng viên của đài BBC đã thực hiện một đoạn phóng sự về hệ thống giám sát qua video tại thành phố Quý Dương,
+ của Trung Quốc \footnote{https://techcrunch.com/2017/12/13/china-cctv-bbc-reporter/}, hệ thống này sử dụng một mạng lưới dày 
+ đặc các camera được tích hợp trí tuệ nhận tạo và xây dựng một cơ sở dữ liệu của người dân thành phố. Trong phóng sự, hệ thống 
+ này sau khi nhập dữ liệu mới là nhân dạng khuôn mặt của phóng viên BBC, thì nó cần hơn 7
+  phút để tìm ra vị trí của phóng viên trong thành phố. Đây là một trong nhiều ứng dụng đáng kinh ngạc 
+  của trí tuệ nhân tạo. Sự mới mẻ mang tính đột phá chính là động lực cho nhóm thực hiện đề tài này.
+
 \section{Tính thực tiễn}
+Một số vấn đề thực tế và khả năng ứng dụng của đề tài:
+\begin{itemize}
+\item Phát hiện ngủ gật. Hằng năm ở nước ta vẫn tồn tại những vụ tai nạn thương tâm xảy 
+ra do tài xế ngủ gật. Một hệ thống phát hiện trạng thái của lái xe có thể giảm thiểu khả 
+năng xảy tai nạn thảm khốc hằng năm. Một hệ thống được lắp đặt trên xe và đủ thông minh 
+để xử lí các tình huống khác nhau, các điều kiện khác nhau trong thực tế. 
+
+\item Tìm kiếm nội dung trong video. Một đứa bé thất lạc ở một trung tâm thương mại lớn,
+ hệ thống camera     
+\item Giám sát giao thông
+\end{itemize}
 \section{Mục tiêu của luận văn}
-\section{Qui trình thực hiện luận văn}
+\section{Quy trình thực hiện luận văn}
 
 \chapter{KIẾN THỨC NỀN TẢNG}
 \section{Kiến thức xử lý ảnh}
@@ -228,10 +349,44 @@ cam kết.
 \section{Triển khai mô hình lên board Jetson}
 
 \chapter{KẾT LUẬN, ĐÁNH GIÁ, HƯỚNG PHÁT TRIỂN}
+%%%chú thích 
+<abc>
+\footnote{là abcd}
 
-\chapter*{PHỤ LỤC}
+%%%insert ảnh, nhớ captioning và ghi nguồn 
+%-------------Figure 2 ---------------------------------
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=0.8\textwidth]{anm_victim_destop2.PNG}
+%	\caption{Tình trạng máy nạn nhân sau cuộc tấn công}
+%	\end{figure}
+	
+%%%%%%%%%%%%%%%%%
+
+
+%{PHỤ LỤC}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\addcontentsline{\bibitem{adf}}
+
 \begin{thebibliography}{80}
+\addcontentsline{toc}{chapter}{Tài liệu tham khảo}
+
+\bibitem{ssd}
+Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed, Cheng-Yang Fu, Alexander C. Berg, "SSD: Single Shot MultiBox Detector", ECCV 2016
+
+\bibitem{fssd}
+Zuoxin Li, Fuqiang Zhou, "FSSD: Feature Fusion Single Shot Multibox Detector", arXiv 2017
+
+\bibitem{s3sd} Shifeng Zhang, Xiangyu Zhu, Zhen Lei, Hailin Shi, Xiaobo Wang, Stan Z.Li, "S$^ 3$FD: Single Shot Scale-invariant Face Detector", ICCV 2017
+
+\bibitem{fasterrcnn} Shaoqing Ren and Kaiming He and Ross Girshick and Jian Sun, "Faster {R-CNN}: Towards Real-Time Object Detection
+with Region Proposal Networks", NIPS 2015
+
+\bibitem{fastrcnn} Ross Girshick, "Fast{R-CNN}", ICCV 2015
+
+\bibitem{rcnn} Ross Girshick, Jeff Donahue, Trevor Darrell, Jitendra Malik, "Rich feature hierarchies for accurate object detection and semantic segmentation", CVPR 2014 
+
+\bibitem{dssd} RCheng-Yang Fu, Wei Liu, Ananth Ranga, Ambrish Tyagi, Alexander C. Berg, "DSSD : Deconvolutional Single Shot Detector", CVPR 2014 
 
 \bibitem{CVX}
 CVX Introduction
